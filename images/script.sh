@@ -8,7 +8,7 @@ for file in *.JPG; do
   cd ../
   
   echo '<a href="images\large\large-'$file'" title="">' >> newgallery.html;
-  echo ' <img src="images\thumb\thumb-'$file'" alt=""> </a>' >> newgallery.html;
+  echo ' <img src="images\thumb\thumb-'$file'" alt=""></a>' >> newgallery.html;
   
   cd orig-nc
 done;
