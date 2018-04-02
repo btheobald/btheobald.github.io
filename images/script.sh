@@ -14,5 +14,5 @@ for file in *.JPG; do
 done;
 
 cd ../
-mogrify -resize 300x225 -quality 80 -sharpen 3 thumb/*;
-mogrify -resize 50% -quality 40 large/*;
+mogrify -resize 300x225 -quality 80 -sharpen 2 thumb/*;
+mogrify -resize 50% -quality 65 large/*;
