@@ -3,51 +3,91 @@
   
   <link rel="stylesheet" href="css/blueimp-gallery.min.css">
 
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700" rel="stylesheet">
   <link rel="stylesheet" href="css/port.css">
   
   <script src="js/jquery-3.3.1.min.js"></script> 
-  <script> 
-    $(function(){
-      $("#includedContent").load("portfolio/newport.html"); 
-    });
-  </script> 
   
 </head>
 <body>
-  <!-- The Gallery as lightbox dialog, should be a child element of the document body -->
-  <div id="blueimp-gallery" class="blueimp-gallery">
+  <h1>Byron Theobald</h1>
+  <ul class="navigation">
+    <li><b>Engineering</b></li>
+    <li><b><a href="photos.html">Photography</a></b></li>
+    <li><b><a href="mailto:bt4g16@soton.ac.uk">Contact</a></b></li>
+  </ul>
+  <br>
+  
+  <h2>GX80 Battery Grip</h2>  
+  <div class="project">
+  <div class="photocolumn">
+    <div id="gx80-battery-grip-gallery" class="blueimp-gallery blueimp-gallery-carousel blueimp-gallery-controls">
+      <div class="slides"></div>
+      <h3 class="title"></h3>
+      <a class="prev">‹</a>
+      <a class="next">›</a>
+      <a class="play-pause"></a>
+    </div>
+
+    <div id="gx80-battery-grip-images" class="links">
+      <a href="images\batterygrip\manual\back.JPG" title=""></a>
+      <a href="images\batterygrip\manual\front.JPG" title=""></a>
+      <a href="images\batterygrip\manual\internal.JPG" title=""></a>
+      <a href="images\batterygrip\manual\oncamera.JPG" title=""></a>
+    </div>
+  </div>
+  <div class="textcolumn">
+      <h3>4000mAh+ Battery Grip for a mirrorless camera.</h3> 
+      <p>I tend to take a lot of photos when i'm hiking. While currently I use a battery pack to recharge while out and about, on longer trips I prefer to keep this for keeping my phone charged.</p>
+      <p>My solution is an integrated battery pack which connects to a custom battery adapter through the battery door. This design supports 2 18650, 20700 or 21700 cells, providing more than 4000mAh of capacity at a similar cost of a first party 1000mAh cell.</p>
+      <p>Used Autodesk Fusion360 for 3D printing models, KiCAD for circuit design and PCB layout.</p>
+      <p><b>Status:</b> Casing Verification and Electronics Development.</p>
+  </div>
+  </div>
+   
+  <br>
+  
+  <div>
+  <h2>This website is new, more projects are on the way!</h2>
+  <!--<div id="gallery-name" class="blueimp-gallery blueimp-gallery-carousel blueimp-gallery-controls">
     <div class="slides"></div>
     <h3 class="title"></h3>
     <a class="prev">‹</a>
     <a class="next">›</a>
-    <a class="close">×</a>
     <a class="play-pause"></a>
-    <ol class="indicator"></ol>
   </div>
-  
-  <center>
-  <h1>Byron Theobald</h1>
-  <h3><a href="index.html">Engineering</a> - <a href="photos.html">Photography</a></h3>
-  <a href="mailto:bt4g16@soton.ac.uk"><p>Contact</p></a>
-  </center>
-  
-  <div id="links" class="links">
-    <div id="includedContent"></div>
-    <a src="" title="">
-  </div>
+    
+  <div id="image-div-name" class="links">
+    <a href="images\large\large-_1060008.JPG" title=""></a>
+    <a href="images\large\large-_1060016.JPG" title=""></a>
+    <a href="images\large\large-_1060070.JPG" title=""></a>
+    <a href="images\large\large-_1060175.JPG" title=""></a>
+    <a href="images\large\large-_1060209.JPG" title=""></a>
+    <a href="images\large\large-_1060399.JPG" title=""></a>
+    <a href="images\large\large-1070712.JPG" title=""></a>
+  </div>-->
   
   <script src="js/blueimp-gallery.min.js"></script>
+    
+  <script> 
+      blueimp.Gallery(document.getElementById('gx80-battery-grip-images').getElementsByTagName('a'),
+      {
+        container : '#gx80-battery-grip-gallery',
+        carousel: true,
+        startSlideshow: false
+      }
+    );
+  </script>  
+    
+  <!--<script>
+    blueimp.Gallery(document.getElementById('image-div-name').getElementsByTagName('a'),
+      {
+        container : '#gallery-name',
+        carousel: true,
+        startSlideshow: false
+      }
+    );
+  </script>-->
   
-  <script>
-    document.getElementById('links').onclick = function (event) {
-        event = event || window.event;
-        var target = event.target || event.srcElement,
-            link = target.src ? target.parentNode : target,
-            options = {index: link, event: event},
-            links = this.getElementsByTagName('a');
-        blueimp.Gallery(links, options);
-    };
-  </script>
-
+  </div>
 </body>

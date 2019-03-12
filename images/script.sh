@@ -3,16 +3,18 @@ rm large/*
 rm thumb/*
 cd orig-nc
 for file in *.JPG; do
-  cp -f $file "..\thumb\thumb-$file";
-  cp -f $file "..\large\large-$file";
-  cd ../
-  
-  echo '<a href="images\large\large-'$file'" title="">' >> newgallery.html;
-  echo ' <img src="images\thumb\thumb-'$file'" alt=""></a>' >> newgallery.html;
-  
-  cd orig-nc
+  rname=$RANDOM;
+  cp -v -f $file '..\thumb\'$rname'.jpg';
+  cp -v -f $file '..\large\'$rname'.jpg';
+done;
+
+cd ../thumb
+
+for file in *.jpg; do
+  echo '<a href="images\large\'$file'" title="">' >> ../newgallery.html;
+  echo ' <img src="images\thumb\'$file'" alt=""></img></a>' >> ../newgallery.html;
 done;
 
 cd ../
-mogrify -resize 300x225 -quality 80 -sharpen 2 thumb/*;
-mogrify -resize 50% -quality 65 large/*;
+mogrify -monitor -resize 300x225 -quality 80 -sharpen 2 thumb/*;
+mogrify -monitor -resize 50% -quality 65 large/*;

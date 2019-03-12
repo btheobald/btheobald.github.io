@@ -1,9 +1,9 @@
 <head>
-  <title>Byron Theobald - Photography Portfolio</title>
+  <title>Byron Theobald - Photo Portfolio</title>
   
   <link rel="stylesheet" href="css/blueimp-gallery.min.css">
 
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700" rel="stylesheet">
   <link rel="stylesheet" href="css/port.css">
   
   <script src="js/jquery-3.3.1.min.js"></script> 
@@ -15,22 +15,25 @@
   
 </head>
 <body>
-  <!-- The Gallery as lightbox dialog, should be a child element of the document body -->
-  <div id="blueimp-gallery" class="blueimp-gallery">
-    <div class="slides"></div>
-    <h3 class="title"></h3>
-    <a class="prev">‹</a>
-    <a class="next">›</a>
-    <a class="close">×</a>
-    <a class="play-pause"></a>
-    <ol class="indicator"></ol>
-  </div>
-  
-  <center>
   <h1>Byron Theobald</h1>
-  <h3><a href="index.html">Engineering</a> - <a href="photos.html">Photography</a></h3>
-  <a href="mailto:bt4g16@soton.ac.uk"><p>Contact</p></a>
-  </center>
+  <ul class="navigation">
+    <li><b><a href="index.html">Engineering</a></b></li>
+    <li><b>Photography</b></li>
+    <li><b><a href="mailto:bt4g16@soton.ac.uk">Contact</a></b></li>
+  </ul>
+  <br>
+
+  <h2>Photos</h2>  
+  <!-- The Gallery as lightbox dialog, should be a child element of the document body -->
+  <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
+      <div class="slides"></div>
+      <h3 class="title"></h3>
+      <a class="prev">‹</a>
+      <a class="next">›</a>
+      <a class="close">×</a>
+      <a class="play-pause"></a>
+      <ol class="indicator"></ol>
+  </div>
   
   <div id="links" class="links">
     <div id="includedContent"></div>
