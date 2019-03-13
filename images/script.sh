@@ -16,5 +16,5 @@ for file in *.jpg; do
 done;
 
 cd ../
-mogrify mogrify -monitor -resize "300^^x225" -gravity center -crop 300x225+0+0 +repage -quality 80 -sharpen 2 thumb/*;
+mogrify -monitor -resize "300^^x225" -gravity center -crop 300x225+0+0 +repage -quality 80 -sharpen 2 thumb/*;
 mogrify -monitor -resize 50% -quality 65 large/*;
