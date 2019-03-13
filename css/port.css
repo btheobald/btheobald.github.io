@@ -44,8 +44,14 @@ h2, .links {
   text-align: center;
 }
 
+.page-sub-heading{
+  text-align: center;
+  font-size: 1.8em;
+}
+
 .project-heading {
   text-align: center;
+  font-size: 1.2em;
 }
 
 .project-sub-heading {

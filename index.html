@@ -20,7 +20,7 @@
   </ul>
   <br>
   
-  <h2 class="project-heading">Electronics</h2>  
+  <h2 class="page-sub-heading">Electronics</h2>  
   <h2 class="project-heading">"Coulomb" - GX80 Battery Grip</h2>  
   <div id="gx80-battery-grip-project" class="project">
   <div class="photocolumn">
@@ -51,7 +51,7 @@
   </div>
    
   <br>
-    
+  <h2 class="page-sub-heading">University Projects</h2>  
   <h2 class="project-heading">"Metric" - D5 Smart Meter Project</h2>
   <div id="d5-smart-meter-project" class="project">
   <div class="photocolumn">
@@ -71,10 +71,37 @@
   <div class="textcolumn">
       <h3 class="project-sub-heading">System Design and Casing for a Smart Meter</h3> 
       <p>At the start of 2019 I participated in a group design project for my degree course, focused on the design and construction of a smart meter to interface with a NI LabView simulation.</p>
-      <p>The device required a casing which could withstand a water ingress test. The design focused on a front panel which would provide information via a TFT LCD and provide two touch sensitive buttons behind an acrylic faceplate.</p>
+      <p>The device required a casing which could withstand a water ingress test. The design focused on a front panel which would provide information via a TFT LCD and provide two capacitive touch buttons behind an acrylic faceplate.</p>
       <p>My main focus with the design was to create a compact and servicable design, opting for board to board interconnects rather than wires to connect internals.</p>
       <p>I also contributed to a significant amount of the overall system, embedded software flow, power supply and analog interface design.
       <p class="center"><b>Status:</b> Complete</p>
+  </div>
+  </div>
+   
+  <br>
+  
+  <h2 class="project-heading">D2 Integrated Circuit Design Project</h2>
+  <div id="d2-ic-project" class="project">
+  <div class="photocolumn">
+    <div id="d2-ic-gallery" class="blueimp-gallery blueimp-gallery-carousel">
+      <div class="slides"></div>
+      <h3 class="title"></h3>
+      <a class="prev">‹</a>
+      <a class="next">›</a>
+      <ol class="indicator"></ol>
+    </div>
+
+    <div id="d2-ic-images" class="links">
+      <a href="images\d2icdesign\overviewcomp.jpg" title=""></a>
+    </div>
+  </div>
+  <div class="textcolumn">
+      <h3 class="project-sub-heading">Layout of Ring Oscillator and Multiplier</h3> 
+      <p>The first group design project of my second year of study focused on the design and layout of several circuits to be produced on an AMS (Austria Microsystems) 350nm process and then tested at the end of the second semester.</p>
+      <p>There were 4 major components constructed, a 18MHz ring oscillator, a serial sequence detector, a 4-bit full-adder and a 7-bit unsigned multiplier.</p>
+      <p>I was primarily responsible for the layout and verification of the oscillator and the multiplier. The main challenge was making the multiplier as compact as possible but also easily expandable in the event that more space was avaliable.</p>
+      <p>This was done by building multiplier cells using a slightly different full-adder design which made use of a multiplexer and 2 XOR gates, rather than the traditional adder design which required more area. This was complemented by a desgin which could be arrayed with minimal manual connections required.</p>
+      <p class="center"><b>Status:</b> Physical Testing</p>
   </div>
   </div>
    
@@ -126,7 +153,17 @@
     );
   </script>  
     
-    
+  <script> 
+    blueimp.Gallery(document.getElementById('d2-ic-images').getElementsByTagName('a'),
+      {
+        container : '#d2-ic-gallery',
+        carousel: true,
+        startSlideshow: false,
+        continuous: false
+      }
+    );
+  </script>    
+  
   <!--<script>
     blueimp.Gallery(document.getElementById('image-div-name').getElementsByTagName('a'),
       {
