@@ -1,8 +1,9 @@
 <head>
   <title>Byron Theobald - Engineering Portfolio</title>
   
-  <link rel="stylesheet" href="css/blueimp-gallery.min.css">
-
+  <link rel="stylesheet" href="css/blueimp-gallery.css">
+  <link rel="stylesheet" href="css/blueimp-gallery-indicator.css">
+  
   <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700" rel="stylesheet">
   <link rel="stylesheet" href="css/port.css">
   
@@ -14,22 +15,25 @@
   <ul class="navigation">
     <li><b>Engineering</b></li>
     <li><b><a href="photos.html">Photography</a></b></li>
+    <li><b><a href="me.html">Me</b></a></li>
     <li><b><a href="mailto:bt4g16@soton.ac.uk">Contact</a></b></li>
   </ul>
   <br>
   
-  <h2>GX80 Battery Grip</h2>  
-  <div class="project">
+  <h2>Electronics</h2>  
+  <h2>"Coulomb" - GX80 Battery Grip</h2>  
+  <div id="gx80-battery-grip-project" class="project">
   <div class="photocolumn">
-    <div id="gx80-battery-grip-gallery" class="blueimp-gallery blueimp-gallery-carousel blueimp-gallery-controls">
+    <div id="gx80-battery-grip-gallery" class="blueimp-gallery blueimp-gallery-carousel">
       <div class="slides"></div>
       <h3 class="title"></h3>
       <a class="prev">‹</a>
       <a class="next">›</a>
-      <a class="play-pause"></a>
+      <ol class="indicator"></ol>
     </div>
 
     <div id="gx80-battery-grip-images" class="links">
+      <a href="images\batterygrip\manual\g7242.JPG" title=""></a>
       <a href="images\batterygrip\manual\back.JPG" title=""></a>
       <a href="images\batterygrip\manual\front.JPG" title=""></a>
       <a href="images\batterygrip\manual\internal.JPG" title=""></a>
@@ -37,18 +41,47 @@
     </div>
   </div>
   <div class="textcolumn">
-      <h3>4000mAh+ Battery Grip for a mirrorless camera.</h3> 
-      <p>I tend to take a lot of photos when i'm hiking. While currently I use a battery pack to recharge while out and about, on longer trips I prefer to keep this for keeping my phone charged.</p>
-      <p>My solution is an integrated battery pack which connects to a custom battery adapter through the battery door. This design supports 2 18650, 20700 or 21700 cells, providing more than 4000mAh of capacity at a similar cost of a first party 1000mAh cell.</p>
-      <p>Used Autodesk Fusion360 for 3D printing models, KiCAD for circuit design and PCB layout.</p>
-      <p><b>Status:</b> Casing Verification and Electronics Development.</p>
+      <h3 class="center">4000mAh+ Battery Grip for a MFT Camera.</h3> 
+      <p>I tend to take a lot of photos when I'm hiking. While currently I use a USB battery pack to recharge while out and about. On longer trips I prefer to keep this for keeping my phone charged, and the camera cannot be used while charging.</p>
+      <p>My solution is an integrated battery pack which connects to a custom adapter through the battery door. This design holds two 18650, 20700 or 21700 cells, providing more than 4000mAh of capacity at a similar cost of a first party 1000mAh battery.</p>
+      <p>The product will feature an integrated battery management system along with status LEDs.</p>
+      <p>Autodesk Fusion360 was used for 3D CAD models, KiCAD for circuit design and PCB layout.</p>
+      <p class="center"><b>Status:</b> Casing and Electronics Development.</p>
+  </div>
+  </div>
+   
+  <br>
+    
+  <h2>"Metric" - D5 Smart Meter Project</h2>
+  <div id="d5-smart-meter-project" class="project">
+  <div class="photocolumn">
+    <div id="d5-smart-meter-gallery" class="blueimp-gallery blueimp-gallery-carousel">
+      <div class="slides"></div>
+      <h3 class="title"></h3>
+      <a class="prev">‹</a>
+      <a class="next">›</a>
+      <ol class="indicator"></ol>
+    </div>
+
+    <div id="d5-smart-meter-images" class="links">
+      <a href="images\d5smartmeter\manual\iso.JPG" title=""></a>
+      <a href="images\d5smartmeter\manual\isorear.JPG" title=""></a>
+    </div>
+  </div>
+  <div class="textcolumn">
+      <h3>System Design and Casing for a Smart Meter</h3> 
+      <p>During the beginning of 2019 I participated in a group design project for my degree course, focused on the design and construction of a simulated smart meter to interface with a NI LabView simulation.</p>
+      <p>The device required a casing which could withstand a water ingress test. The design focused on a front panel which would provide information via a TFT LCD and provide two touch sensitive buttons behind an acrylic faceplate.</p>
+      <p>My main focus with the design was to create a compact and servicable design, opting for board to board interconnects rather than wires to connect internals.</p>
+      <p>I also contributed to a significant amount of the overall system, embedded software flow, power supply and analog interface design.
+      <p class="center"><b>Status:</b> Complete</p>
   </div>
   </div>
    
   <br>
   
   <div>
-  <h2>This website is new, more projects are on the way!</h2>
+  <h2>This website is new, previous projects are on the way!</h2>
   <!--<div id="gallery-name" class="blueimp-gallery blueimp-gallery-carousel blueimp-gallery-controls">
     <div class="slides"></div>
     <h3 class="title"></h3>
@@ -68,16 +101,31 @@
   </div>-->
   
   <script src="js/blueimp-gallery.min.js"></script>
-    
+   
+  
+   
   <script> 
-      blueimp.Gallery(document.getElementById('gx80-battery-grip-images').getElementsByTagName('a'),
+    blueimp.Gallery(document.getElementById('gx80-battery-grip-images').getElementsByTagName('a'),
       {
         container : '#gx80-battery-grip-gallery',
         carousel: true,
-        startSlideshow: false
+        startSlideshow: false,
+        continuous: false
+      }
+    );
+  </script>
+  
+  <script> 
+    blueimp.Gallery(document.getElementById('d5-smart-meter-images').getElementsByTagName('a'),
+      {
+        container : '#d5-smart-meter-gallery',
+        carousel: true,
+        startSlideshow: false,
+        continuous: false
       }
     );
   </script>  
+    
     
   <!--<script>
     blueimp.Gallery(document.getElementById('image-div-name').getElementsByTagName('a'),

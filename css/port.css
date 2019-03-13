@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  max-width:1000px;
+  max-width:1200px;
   min-width:340px;
   margin: 0 auto;
   padding: 1em;
@@ -11,8 +11,8 @@ body {
   font-size: 1em;
   font-weight:400;
   line-height: 1.4em;
-  background: #222;
-  color: #fff;
+  background: #fff;
+  color: #000;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
@@ -41,35 +41,53 @@ h2, .links {
 }
 
 .project {
-  display:flex;
-  flex-wrap:wrap;
-  flex-direction:row;
-  justify-content:space-around;
-  align-items:center
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .photocolumn {
-  flex:1 1 600px;
-  padding:5px
+  flex: 50%;
+  min-width: 50%;
+  max-width: 70%;
+  padding: 15px 15px;
 }
 
 .textcolumn {
-  flex:1 1 200px;
   text-align: justify;
-  padding:5px
+  flex: 40%;
+  min-width: 20%;
+  padding:15px 15px;
 }
 
-@media (min-width: 300px) {
-  .navigation {
-    list-style: none;
-    text-align: center;
-    font-size: 1.2em;
-    padding: 0;
+.navigation {
+  list-style: none;
+  text-align: center;
+  font-size: 1.2em;
+  padding: 0;
+}
+.navigation li {
+  display: inline-block;
+}
+.navigation li:not(:first-child):before {
+  content: '| ';
+}
+
+@media (max-width: 760px) {
+  .photocolumn {
+    flex: 100%;
+    max-width: 100%;
+    padding:5px
   }
-  .navigation li {
-    display: inline-block;
+  
+  .textcolumn {
+    text-align: justify;
+    flex: 100%;
+    padding:5px
   }
-  .navigation li:not(:first-child):before {
-    content: '| ';
-  }
+}
+
+h3.center,p.center,a.center {
+  text-align: center;
 }

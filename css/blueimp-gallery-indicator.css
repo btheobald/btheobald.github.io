@@ -33,7 +33,7 @@
           box-sizing: content-box;
   border: 1px solid transparent;
   background: #ccc;
-  background: rgba(255, 255, 255, 0.25) center no-repeat;
+  background: rgba(0, 0, 0, 0.25) center no-repeat;
   border-radius: 5px;
   box-shadow: 0 0 2px #000;
   opacity: 0.5;
@@ -42,7 +42,7 @@
 .blueimp-gallery > .indicator > li:hover,
 .blueimp-gallery > .indicator > .active {
   background-color: #fff;
-  border-color: #fff;
+  border-color: #000;
   opacity: 1;
 }
 
