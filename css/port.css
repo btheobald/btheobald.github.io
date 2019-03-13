@@ -40,6 +40,22 @@ h2, .links {
   font-size: 1.5em;
 }
 
+.page-heading{
+  text-align: center;
+}
+
+.project-heading {
+  text-align: center;
+}
+
+.project-sub-heading {
+  text-align: center;
+}
+
+.project-status {
+  text-align: center;
+}
+
 .project {
   display: flex;
   flex-flow: row wrap;
@@ -74,7 +90,7 @@ h2, .links {
   content: '| ';
 }
 
-@media (max-width: 760px) {
+@media (max-width: 760px){  
   .photocolumn {
     flex: 100%;
     max-width: 100%;
@@ -88,6 +104,121 @@ h2, .links {
   }
 }
 
-h3.center,p.center,a.center {
-  text-align: center;
+@media screen 
+  and (max-device-width: 420px) 
+  and (max-device-height: 768px) 
+  and (-webkit-device-pixel-ratio: 3)
+  and (orientation: portrait){
+  body {
+      max-width:1200px;
+      min-width:340px;
+      margin: 0 auto;
+      padding: 1em;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.2em;
+      font-weight:500;
+      line-height: 1.4em;
+      background: #fff;
+      color: #000;
+      -webkit-text-size-adjust: 100%;
+          -ms-text-size-adjust: 100%;
+  }
+  
+  .page-heading{
+    text-align: center;
+    font-size:1.5em;
+    line-height: 0.5em;
+  }
+
+  .navigation{
+    list-style: none;
+    text-align: center;
+    font-size: 1em;
+    padding: 0;
+  }
+  
+  .project-heading {
+    text-align: center;
+    font-size:1.2em;
+    line-height: 0.5em;
+  }
+  
+  .project-sub-heading {
+    text-align: center;
+    font-size:1.2em;
+    line-height: 1.25em;
+  }
+  .photocolumn {
+    flex: 100%;
+    max-width: 100%;
+    padding:5px
+  }
+  
+  .textcolumn {
+    text-align: justify;
+    flex: 100%;
+    padding:5px;
+    line-height: 1.2em;
+  }
+}
+
+@media screen 
+  and (max-device-width: 768px) 
+  and (max-device-height: 420px) 
+  and (-webkit-device-pixel-ratio: 3)
+  and (orientation: landscape){
+    
+  body {
+    max-width:1200px;
+    min-width:340px;
+    margin: 0 auto;
+    padding: 1em;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+    font-weight:500;
+    line-height: 1.4em;
+    background: #fff;
+    color: #000;
+    -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+  }  
+    
+  .page-heading{
+    text-align: center;
+    font-size:1.5em;
+    line-height: 0.5em;
+  }
+
+  .navigation{
+    list-style: none;
+    text-align: center;
+    font-size: 1em;
+    padding: 0;
+  }
+  
+  .project-heading {
+    text-align: center;
+    font-size:1.0em;
+    line-height: 0.5em;
+  }
+  
+  .project-sub-heading {
+    text-align: center;
+    font-size:1.0em;
+    line-height: 1.25em;
+  }
+  
+  .photocolumn {
+    flex: 100%;
+    max-width: 100%;
+    padding:5px
+  }
+  
+  .textcolumn {
+    text-align: justify;
+    flex: 100%;
+    padding:5px;
+    font-size: 1.0em;
+    line-height: 1.2em;
+  }
 }
