@@ -76,10 +76,38 @@
       <p>The device made use of two TI TPS61165 high brightness white LED drivers in tandem with a ATTiny10 MCU for control. Each strip used a different colour temperature LED to provide the user with the choice of lower brightness reading (3000k) or higher brightness working light (3000k + 6000k).</p>
       <p>The LED board itself was also a significant point of investigation, as considerations needed to be made for thermal management. Approximately 5.5W is dissipated by the LEDs at 100% brightness. Vias reduce thermal resistance to the reverse of the board. This was attached to a heat spreader using thermal epoxy. The heat spreader then made contact with the casing.</p>
       <p>The design for the electronics was produced using KiCAD. No credit was avaliable on the course for electronics, but it was invaluable nontheless.</p>
-      <p class="center"><b>Status:</b> Archived</p>
+  </div>
+  </div>
+  
+  <h2 class="project-heading">"Ducks" - Efficacy Solutions Internship Projects</h2>
+  <div id="efsol-project" class="project">
+  <div class="photocolumn">
+    <div id="efsol-gallery" class="blueimp-gallery blueimp-gallery-carousel">
+      <div class="slides"></div>
+      <h3 class="title"></h3>
+      <a class="prev">‹</a>
+      <a class="next">›</a>
+      <ol class="indicator"></ol>
+    </div>
+
+    <div id="efsol-images" class="links">
+      <a href="images\efsol\large\3717.jpg" title=""></a>
+      <a href="images\efsol\large\10814.jpg" title=""></a>
+      <a href="images\efsol\large\26464.jpg" title=""></a>
+      <a href="images\efsol\large\26268.jpg" title=""></a>
+    </div>
+    
+  </div>
+  <div class="textcolumn">
+      <p><b>"X302" Development Board</b>, this used a STM32F302 ARM Cortex M4 on a custom PCB with various components, such as a coin cell holder and Micro-SD card slot. The PCB was sized to allow it to fit inside a handheld case for rapid prototyping of a specialist product.</p>
+      <p><b>"μTime"</b>, This compact device makes use of a boost converter to power an ATTiny441 from a single 1.5V cell and has 8 output LEDs and a speaker. The software would have enabled this to act as a 'Learning Timer'. </p>
+      <p>While software and final testing the "μTime" was not completed by the end of the internship, recent investigation revealed that there were issues with the use of the chosen boost converter when the microcontroller is in sleep mode due to low effciency causing rapid battery drain. The solution to this would be to make use of a different part with a shutdown bypass mode.</p>
+      <p><b>"SWD/JTAG Breadboard Adapter"</b> This breaks out the SWD programming pins onto a breadboard for use with THT ARM Cortex Parts.</p>
   </div>
   </div>
    
+  <br>
+  
   <br>
   
     <h2 class="page-sub-heading">Individual Academic Projects</h2>  
@@ -108,7 +136,6 @@
       <p>The main mantra while designing the unit was modularity to introduce the idea of a 'design ecosystem'. Various designs and construction methods were tested for the hinges, but 3D printing was used as it enabled complex and accurate designs to be produced.</p>
       <p>Modularity also alowed the unit to be completely disassembled. The lamp can be packed into a box which can fit through a letter box.</p>
       <p>The electronics which drive the dual LED strings were completely custom designed and fit entirely within the upper module containing the interface buttons. (See Project - Atom)</p>
-      <p class="center"><b>Status:</b> Archived</p>
   </div>
   </div>
    
@@ -136,7 +163,6 @@
       <p>Combining my knowledge of programming and physics, I designed from the ground up a simulator that would test the limits of performance of brute force algorithms, multithreaded data management and introduce me to graphics programming.</p>
       <p>The project was a success, and the end result is a N-Body simulator capable of handling 2000 bodies at 30FPS, this is one of the most complex programming projects I have ever undertaken by myself.</p>
       <p>Source code for this project is public on github.</p>
-      <p class="center"><b>Status:</b> Archived</p>
   </div>
   </div>
    
@@ -165,7 +191,6 @@
       <p>The device required a casing which could withstand a water ingress test. The design focused on a front panel which would provide information via a TFT LCD and provide two capacitive touch buttons behind an acrylic faceplate.</p>
       <p>My main focus with the design was to create a compact and servicable design, opting for board to board interconnects rather than wires to connect internals.</p>
       <p>I also contributed to a significant amount of the overall system, embedded software flow, power supply and analog interface design.
-      <p class="center"><b>Status:</b> Complete</p>
   </div>
   </div>
    
@@ -192,7 +217,6 @@
       <p>There were 4 major components constructed, a 18MHz ring oscillator, a serial sequence detector, a 4-bit full-adder and a 7-bit unsigned multiplier.</p>
       <p>I was primarily responsible for the layout and verification of the oscillator and the multiplier. The main challenge was making the multiplier as compact as possible but also easily expandable in the event that more space was avaliable.</p>
       <p>This was done by building multiplier cells using a slightly different full-adder design which made use of a multiplexer and 2 XOR gates, rather than the traditional adder design which required more area. This was complemented by a desgin which could be arrayed with minimal manual connections required.</p>
-      <p class="center"><b>Status:</b> Physical Testing</p>
   </div>
   </div>
     
@@ -281,6 +305,17 @@
     blueimp.Gallery(document.getElementById('aim-images').getElementsByTagName('a'),
       {
         container : '#aim-gallery',
+        carousel: true,
+        startSlideshow: false,
+        continuous: true
+      }
+    );
+  </script>
+  
+  <script>
+    blueimp.Gallery(document.getElementById('efsol-images').getElementsByTagName('a'),
+      {
+        container : '#efsol-gallery',
         carousel: true,
         startSlideshow: false,
         continuous: true
