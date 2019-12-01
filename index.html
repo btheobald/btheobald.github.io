@@ -19,8 +19,32 @@
     <li><b><a href="mailto:bt4g16@soton.ac.uk">Contact</a></b></li>
   </ul>
   <br>
+    
+  <h2 class="page-sub-heading">Individual Projects</h2>  
+  <h2 class="project-heading">SPINE - FPGA Based Hardware Acceleration</h2>  
+  <div id="spine-project" class="project">
+  <div class="photocolumn">
+    <div id="spine-gallery" class="blueimp-gallery blueimp-gallery-carousel">
+      <div class="slides"></div>
+      <h3 class="title"></h3>
+      <a class="prev">‹</a>
+      <a class="next">›</a>
+      <ol class="indicator"></ol>
+    </div>
+
+    <div id="spine-images" class="links">
+      <a href="images\spine\manual\forcepipe.PNG" title=""></a>
+    </div>
+  </div>
+  <div class="textcolumn">
+      <h3 class="project-sub-heading">An investigation into low-cost SoC hardware acceleration.</h3> 
+      <p>Inspired by The University of Tokyo's GRAPE (GRAvity PipE) projects which are designed to accelerate the N-Body problem.</p>
+      <p>SPINE intends to demonstrate the performance improvement that can be obtained by tightly coupling a CPU with custom acceleration logic for a variety of computational problems.</p>
+      <p>The system is designed around a DE1-SoC, which uses a 85k LE Cyclone V FPGA and a dual-core ARM Cortex-A9 Hard Processor System. The HPS runs Linux and performs time-integration of the simulation.</p>
+      <p>The FPGA fabric is purely dedicated to the instantiation of a number of pipelines user calculation of the force bettween particles. Simulation data is transfered via FTP to a secondary computer responsible for rendering.</p>
+  </div>
+  </div>  
   
-  <h2 class="page-sub-heading">Personal Projects</h2>  
   <h2 class="project-heading">"Coulomb" - GX80 Battery Grip</h2>  
   <div id="gx80-battery-grip-project" class="project">
   <div class="photocolumn">
@@ -110,10 +134,7 @@
   </div>
    
   <br>
-  
-  <br>
-  
-    <h2 class="page-sub-heading">Individual Academic Projects</h2>  
+
   <h2 class="project-heading">"Aim" - Desk Lamp</h2>
   <div id="aim-project" class="project">
   <div class="photocolumn">
@@ -246,7 +267,16 @@
   
   <script src="js/blueimp-gallery.min.js"></script>
    
-  
+  <script> 
+    blueimp.Gallery(document.getElementById('spine-images').getElementsByTagName('a'),
+      {
+        container : '#spine-gallery',
+        carousel: true,
+        startSlideshow: false,
+        continuous: true
+      }
+    );
+  </script>
    
   <script> 
     blueimp.Gallery(document.getElementById('gx80-battery-grip-images').getElementsByTagName('a'),
