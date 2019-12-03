@@ -17,4 +17,4 @@ done;
 
 cd ../
 mogrify -monitor -auto-orient -resize "300x225^" -gravity Center -extent 300x225 -quality 80 -sharpen 2 thumb/*;
-mogrify -monitor -resize 50% -quality 65 large/*;
+mogrify -monitor -auto-orient -resize 40% -quality 65 large/*;
