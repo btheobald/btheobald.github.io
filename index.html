@@ -39,8 +39,9 @@
   <div class="textcolumn">
       <h3 class="project-sub-heading">An investigation into low-cost SoC hardware acceleration.</h3> 
       <p>Inspired by The University of Tokyo's GRAPE (GRAvity PipE) projects which are designed to accelerate the N-Body problem. SPINE intends to demonstrate the performance improvement that can be obtained by tightly coupling a CPU with dedicated simulation co-processor.</p>
-      <p>The system is designed around a Cyclone V FPGA and a dual-core ARM Cortex-A9 Hard Processor System. The HPS runs Linux and performs time-integration of the simulation, output can then be displayed in 3D on a host PC after the simulation is complete.</p>
-      <p>The pipeline uses truncated IEEE single-precision floating-point with 27-bits instead of the standard 32-bits, and removing LSB from the mantissa. This reduces accuracy but preserves range, while still allowing effective use of hard-IP 18x18 bit multipliers on the FPGA. This method also enables use of the popular Fast Inverse Square root method.</p>
+      <p>The system is designed around a Cyclone V FPGA and a dual-core ARM Cortex-A9 Hard Processor System. The HPS runs Linux and performs time-integration of the simulation, output can then be displayed in 2D in real-time and optionally recorded.</p>
+      <p>The pipeline uses a truncated floating-point format with 27-bits instead of the standard 32-bits, reducing precision but preserving range. This allowings effective use of hard-IP 18x18 bit multipliers on the FPGA.</p>
+      <p>The end result has 16 fixed function pipelines running at 130MHz, calculating 2.08 Billion interactions per second, equivalent of around 30GFLOPs. This translates to 3x better performance than a 5820k, and 121x faster than the Cortex-A9 itself. It does this while consuming only 6W during runtime.
   </div>
   </div>  
   
