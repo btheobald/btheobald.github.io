@@ -1,0 +1,17 @@
+---
+layout: post
+title: "Swansong"
+date: 2021-03-05
+description: 'A Fixed-Wing Flight Controller'
+image: /assets/images/swansongtb.png
+author: Byron Theobald
+tags: 
+  - GPS
+  - Autopilot
+  - STM32
+  - Flight
+  - Control
+---
+Biologically Inspired Robotics is a module in which; in a small team, we are tasked with designing and building a robotic system which can demonstrate some inspiration from nature. The team is designing a glider with a deployable wings in order to reduce drag during a vertical launch. I designed Swansong to be a development platform for the brains of the glider.<!--break-->
+
+

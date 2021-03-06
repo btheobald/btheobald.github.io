@@ -1,0 +1,25 @@
+---
+layout: post
+title: "Atlas"
+date: 2021-03-06
+description: 'A GPS Cycling Computer'
+image: /assets/images/atlas/atlasviews.png
+author: Byron Theobald
+tags: 
+  - GPS
+  - STM32
+  - PCB
+  - Mapping
+  - Cycling
+---
+I started cycling during the summer of 2020 out of nesscessity, but it quickly became a something that I found a lot of value in as I traveled further than I ever had before under my own steam. Navigation is not always easy, so I'm building something to help with that.<!--break-->
+
+## Current Market
+
+The cycling computer market is primarily dominated by two companies, both of which offer a range of SKUs at varying prices-points and feature-sets. Some will offer very basic black and white pre-planned route navigation, while others provide a full colour map and will re-route you if you take a wrong turn. Prices start at around £130 for a device with basic navigation, up to over £500 for a top-end device.
+
+On the surface, these devices do not appear very computationally powerful, and sit on the edge of what you would consider an embedded device. They do feature fairly rich operating systems with a lot of user configuration. Wireless is typically also supported for connecting to sensors, typically using the ANT+ protocol or communication with a smartphone via Bluetooth.
+
+## Project Aim
+
+I wanted to build a device that could at a bare minimum display a map on a low power display, while also displaying a .GPX track indicating a pre-planned route.

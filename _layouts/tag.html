@@ -1,18 +1,19 @@
 ---
 layout: default
-title: Portfolio
-pagination:
-  enabled: true
 ---
+<section class="mast section-padding--double">
+  <div class="grid">
+    <h2>
+      {{ page.autopages.display_name }}
+    </h2>
+  </div>
+</section>
 
-  <article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-    <div class="post__header section-padding">
-      <div class="grid-small">
-        <h2 itemprop="name headline">{{ page.title }}</h2>
-
-        <time class="post__date" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%-d %b %Y" }}</time>
-      </div>
-    </div>
+<div class="section-padding--none">
+  <div class="grid-large">
+    <hr class="sep"/>
+  </div>
+</div>
 
 <!-- The main content area -->
 <div class="posts">

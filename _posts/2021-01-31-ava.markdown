@@ -1,0 +1,20 @@
+---
+layout: post
+title: "AVA"
+date: 2021-01-31
+description: 'Ai Vector Accelerator'
+image: /assets/images/ava/architecturefull_poster.png
+author: Byron Theobald
+tags: 
+  - SystemVerilog
+  - RISCV
+  - Verilator
+  - Neural
+  - Network
+  - Accelerator
+  - OpenHW
+  - CV32E40P
+---
+The first semester of my Master's involved a large group design project, our task was to create a hardware accelerator for AI tasks targeting the low-power CV32E40P RISC-V core designed by the OpenHW group. 
+
+The design implememented a minimal subset of the RISC-V 'V' Vector specification and acheived a 5x speed-up in TinyMLPerf compared to a non-vectorised runtime.<!--break-->

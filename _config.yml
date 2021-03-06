@@ -1,0 +1,73 @@
+# Site/SEO settings
+email: okay@samesies.io
+baseurl: ""
+permalink: /:year/:month/:day/:title/
+google_analytics: 
+
+name: Byron Theobald
+title: Byron Theobald
+description: >
+  A portfolio of my electronics, software and product design projects.
+url: http://btheobald.github.io
+default_img: /assets/images/seo.jpg
+social:
+  - name: github
+    url: https://github.com/btheobald
+  - name: instagram
+    url: https://www.instagram.com/byrontheobald/
+  - name: linkedin
+    url: https://www.linkedin.com/in/b-theobald/
+
+# Disqus settings
+disqus: btheobald-portfolio
+
+# Author settings
+author:
+  - name: Byron Theobald
+    bio: From Ipswich, Suffolk, currently living in Southampton and in my final year of study towards a Master's degree in Electronic and Electrical Engineering.
+    url: http://btheobald.github.io
+
+# Pagination settings
+pagination:
+  enabled: true
+  debug: false
+  per_page: 12
+  permalink: '/page/:num/'
+  title: ':title'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+autopages:
+  enabled: true
+  categories:
+    enabled: false
+  collections:
+    enabled: false
+  tags:
+    layouts: 
+      - 'tag.html'
+    title: 'Portfolio'
+    permalink: '/tag/:tag'
+    slugify:
+      mode: raw
+      cased: true
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-paginate-v2
+  - jekyll-sitemap
+compress_html:
+  clippings: all
+  comments: all
+  startings: [html, head, body]
+exclude:
+  - node_modules
+  - .DS_Store
+  - barber.jpg
+  - Gemfile
+  - Gemfile.lock
+  - gulpfile.js
+  - package.json
+  - README.md
+  - vendor
