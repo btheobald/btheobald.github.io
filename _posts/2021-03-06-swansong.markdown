@@ -3,7 +3,7 @@ layout: post
 title: "Swansong"
 date: 2021-03-05
 description: 'A Fixed-Wing Flight Controller'
-image: /assets/images/swansongtb.png
+image: /assets/images/swansong/swansongtb.png
 author: Byron Theobald
 tags: 
   - GPS
