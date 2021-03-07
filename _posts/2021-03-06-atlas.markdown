@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Atlas"
+status: In Build (March 2021)
 date: 2021-03-06
 description: 'A GPS Cycling Computer'
 image: /assets/images/atlas/atlasviews.png
@@ -12,7 +13,7 @@ tags:
   - Mapping
   - Cycling
 ---
-I started cycling during the summer of 2020 out of nesscessity, but it quickly became a something that I found a lot of value in as I traveled further than I ever had before under my own steam. Navigation is not always easy, so I'm building something to help with that.<!--break-->
+I got into cycling over the summer of 2020 out of nesscessity. As I traveled further and further it became much more than that. Navigation while on the road is not always easy, so I'm building something to help with that.<!--break-->
 
 ## Current Market
 
