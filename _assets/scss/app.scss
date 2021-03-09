@@ -15,7 +15,31 @@
 //---------------------------------------------- 
 @import 'fonts/_roboto';
 @import 'fonts/_lora';
-@import 'fonts/_icons';
+@import 'fonts/fontawesome.scss';
+@import 'fonts/regular.scss';
+@import 'fonts/brands.scss';
+
+@font-face {
+  font-family: 'Font-Awesome';
+  src: '/assets/webfonts/fa-brands-400.ttf';
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="fa-"], [class*=" fa-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'Font Awesome 5 Brands' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 //----------------------------------------------
 // Tools: Main Config & Global Variables

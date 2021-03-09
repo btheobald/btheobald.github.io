@@ -2,12 +2,18 @@
 // Footer
 //---------------------------------------------- 
 .footer {
-  color: $color-white;
-  background-color: $color-black;
+  color: $color-black;
+  background-color: $color-white;
   border-top: $border;
 
-  &__container {
-    margin-top: 3em;
+  box-shadow: 0 -1px 3px rgba($color-black, 0.1);
+
+  z-index: $z-999;
+
+  &__text {
+    text-align:center;
+    padding-top:25px;
+    padding-bottom:10px
   }
 
   &__tags {

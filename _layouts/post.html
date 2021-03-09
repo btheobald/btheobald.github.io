@@ -17,6 +17,7 @@ layout: default
           <figure class="absolute-bg" style="background-image: url('{{ page.image }}');"></figure>
         </div>
       </div>
+      <p itemprop="name caption" style="font-style: italic; font-family:'lora'; text-align: center; ">{{ page.caption }}</p>
     {% endif %}
 
     <div class="post__content section-padding">
@@ -39,6 +40,7 @@ layout: default
 
       <div class="section-padding">
         <div class="grid-small">
+          <img src="/assets/images/me.jpg" alt="Me" width="130px" height="130px" style="float: left; border-radius: 15%; margin-right: 20px; box-shadow: 0px 0px 3px #e6e6e6;"></img>
           {% for author in page.author %}
             {% assign authorDetails = site.author | where: "name", author %}
             {% if forloop.first == true %}

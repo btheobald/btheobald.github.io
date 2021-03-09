@@ -1,5 +1,5 @@
 <header class="header">
-  <a class="header__title" href="{{ '/' | absolute_url }}">{{ site.title }}</a>
+  <a class="header__title" href="{{ '/' | absolute_url }}"">{{ site.title | upcase }}</a>
   <ul class="header__list">
     {% for social in site.social %}
       <li><a href="{{ social['url'] }}" target="_blank"><i class="fa fa-{{ social['name'] }}"></i></a></li>

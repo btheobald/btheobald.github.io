@@ -1,11 +1,10 @@
-<!-- The footer at the very bottom of the screen 
+<!-- The footer at the very bottom of the screen -->
 <footer class="footer">
   <div class="grid">
-    <div class="footer__container">
-      {% include social.html %}
-    </div>
+      <div class="footer__text"> {{ site.copyright }} </div>
+      <!--{% include social.html %} -->
   </div>
-</footer>-->
+</footer>
 
 {% if paginator.next_page %}
   <script>

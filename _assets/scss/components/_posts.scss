@@ -65,6 +65,22 @@
     // }
   }
 
+  &__caption {
+
+    position: absolute; top: 50%; width:100%;
+
+    opacity: 0;
+    display:block;
+
+    text-align: center;
+    font-weight: bold;
+    font-size: 32pt;
+    font-family: 'lora';
+
+    transition: all 300ms ease-in-out;
+    text-shadow: 0px 0px 10px white;
+  }
+
   &__link {
     display: block;
 
@@ -72,8 +88,16 @@
 
     &:hover {
       .posts__img {
-        transform: translate3d(0, -5px, 0);
+        //transform: translate3d(0, -5px, 0);
         opacity: 0.5;
+        -webkit-filter: blur(2px);
+		-moz-filter: blur(2px);
+		-ms-filter: blur(2px);
+		filter: blur(2px);
+      }
+      .posts__caption {
+        transform: translate3d(0, -20px, 0);
+        opacity: 1.0;
       }
     }
   }
