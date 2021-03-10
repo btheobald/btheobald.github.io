@@ -1,6 +1,6 @@
 # Site/SEO settings
 email: bt4g16@soton.ac.uk
-baseurl: "https://btheobald.github.io"
+baseurl: ""
 permalink: /:year/:month/:day/:title/
 google_analytics: UA-191549308-1
 

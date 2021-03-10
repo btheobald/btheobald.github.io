@@ -4,10 +4,10 @@
     <title>Byron Theobald</title>
     <description>A portfolio of my electronics, software and product design projects.
 </description>
-    <link>https://btheobald.github.iohttp://btheobald.github.io</link>
-    <atom:link href="http://btheobald.github.iohttps://btheobald.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 10 Mar 2021 01:24:18 +0000</pubDate>
-    <lastBuildDate>Wed, 10 Mar 2021 01:24:18 +0000</lastBuildDate>
+    <link>http://btheobald.github.io</link>
+    <atom:link href="http://btheobald.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 10 Mar 2021 01:31:39 +0000</pubDate>
+    <lastBuildDate>Wed, 10 Mar 2021 01:31:39 +0000</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -75,8 +75,8 @@ The power button for the device is connected to the backup voltage, so that when
 &lt;p&gt;&lt;strong&gt;(More To Follow)&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Sat, 06 Mar 2021 00:00:00 +0000</pubDate>
-        <link>http://btheobald.github.iohttps://btheobald.github.io/2021/03/06/atlas/</link>
-        <guid isPermaLink="true">http://btheobald.github.iohttps://btheobald.github.io/2021/03/06/atlas/</guid>
+        <link>http://btheobald.github.io/2021/03/06/atlas/</link>
+        <guid isPermaLink="true">http://btheobald.github.io/2021/03/06/atlas/</guid>
         
         <category>GPS</category>
         
@@ -98,8 +98,8 @@ The power button for the device is connected to the backup voltage, so that when
 &lt;p&gt;&lt;strong&gt;(More To Follow)&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 05 Mar 2021 00:00:00 +0000</pubDate>
-        <link>http://btheobald.github.iohttps://btheobald.github.io/2021/03/05/swansong/</link>
-        <guid isPermaLink="true">http://btheobald.github.iohttps://btheobald.github.io/2021/03/05/swansong/</guid>
+        <link>http://btheobald.github.io/2021/03/05/swansong/</link>
+        <guid isPermaLink="true">http://btheobald.github.io/2021/03/05/swansong/</guid>
         
         <category>GPS</category>
         
@@ -121,8 +121,8 @@ The power button for the device is connected to the backup voltage, so that when
 &lt;p&gt;The design implememented a minimal subset of the RISC-V ‘V’ Vector specification and acheived a 5x speed-up in TinyMLPerf compared to a non-vectorised runtime.&lt;!--break--&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 31 Jan 2021 00:00:00 +0000</pubDate>
-        <link>http://btheobald.github.iohttps://btheobald.github.io/2021/01/31/ava/</link>
-        <guid isPermaLink="true">http://btheobald.github.iohttps://btheobald.github.io/2021/01/31/ava/</guid>
+        <link>http://btheobald.github.io/2021/01/31/ava/</link>
+        <guid isPermaLink="true">http://btheobald.github.io/2021/01/31/ava/</guid>
         
         <category>SystemVerilog</category>
         
