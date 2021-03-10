@@ -75,4 +75,4 @@ The power button for the device is connected to the backup voltage, so that when
 
 **LCD** - There are two other primary regulators on the board, both of which are boost converters. One 5V boost converter (MCP1640) produces the analog voltage required for the LCD, the other is a constant current LED driver (LV52204), and is almost the same design that I implemented years ago for Atom/Aim. A PWM signal can be used to control the backlight brightness.
 
-**More To Follow**
+**(More To Follow)**
