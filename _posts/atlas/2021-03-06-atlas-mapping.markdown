@@ -26,7 +26,7 @@ Vector formats are small, requiring around a gigabyte to map the entire of the U
 
 ##### Links
 
-- [Introduction] ({% post_url atlas/21-03-06-atlas %})
+- [Introduction]({% post_url atlas/21-03-06-atlas %})
 - [Hardware Design]({% post_url atlas/21-03-06-atlas-hardware %})
 - Mapping
 - [Software Design]({% post_url atlas/21-03-06-atlas-software %})

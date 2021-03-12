@@ -6,8 +6,8 @@
 </description>
     <link>http://btheobald.github.io</link>
     <atom:link href="http://btheobald.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 12 Mar 2021 19:47:07 +0000</pubDate>
-    <lastBuildDate>Fri, 12 Mar 2021 19:47:07 +0000</lastBuildDate>
+    <pubDate>Fri, 12 Mar 2021 19:55:19 +0000</pubDate>
+    <lastBuildDate>Fri, 12 Mar 2021 19:55:19 +0000</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -175,7 +175,7 @@ The power button for the device is connected to the backup voltage, so that when
 &lt;h5 id=&quot;links&quot;&gt;Links&lt;/h5&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;[Introduction] (/2021/03/06/atlas/)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/2021/03/06/atlas/&quot;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;/2021/03/06/atlas-hardware/&quot;&gt;Hardware Design&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Mapping&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;/2021/03/06/atlas-software/&quot;&gt;Software Design&lt;/a&gt;&lt;/li&gt;
