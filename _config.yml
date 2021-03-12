@@ -29,8 +29,7 @@ author:
     bio: From Suffolk, currently living in Hampshire.<br>Electrical and Electronic Engineer.<br>A keen cyclist, runner, hiker and photographer.
     url: http://btheobald.github.io
 
-copyright: <p> Copyright © 2014-2021 Byron Theobald </p> <p> Hosted with Github Pages, Jekyll based on <a href=https://github.com/samesies/barber-jekyll> Barber</a>. </p>
-
+copyright: <p>Copyright © 2014-2021 Byron Theobald</p> <p>Hosted with Github Pages, Jekyll based on <a href=https://github.com/samesies/barber-jekyll> Barber</a>.</p>
 # Pagination settings
 pagination:
   enabled: true

@@ -6,29 +6,45 @@
 </description>
     <link>http://btheobald.github.io</link>
     <atom:link href="http://btheobald.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 10 Mar 2021 01:31:39 +0000</pubDate>
-    <lastBuildDate>Wed, 10 Mar 2021 01:31:39 +0000</lastBuildDate>
+    <pubDate>Fri, 12 Mar 2021 19:47:07 +0000</pubDate>
+    <lastBuildDate>Fri, 12 Mar 2021 19:47:07 +0000</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
         <title>Atlas</title>
-        <description>&lt;p&gt;I got into cycling over the summer of 2020 out of nesscessity. As I traveled further and further, my confidence improved and found a lot of enjoyment in being out and exploring on the bike. One barrier is that navigation while on the road is not always easy, so I’m building something to help with that.&lt;!--break--&gt;&lt;/p&gt;
+        <description>&lt;h3 id=&quot;current-software-design&quot;&gt;Current Software Design&lt;/h3&gt;
 
-&lt;h3 id=&quot;current-market&quot;&gt;Current Market&lt;/h3&gt;
+&lt;p&gt;Details to follow.&lt;/p&gt;
 
-&lt;p&gt;The cycling computer market is primarily dominated by two companies, both of which offer a range of SKUs at varying prices-points and feature-sets. Some will offer very basic black and white pre-planned route navigation, while others provide a full colour map and will re-route you if you take a wrong turn. Prices start at around £130 for a device with basic navigation, up to over £500 for a top-end device.&lt;/p&gt;
+&lt;h4 id=&quot;links&quot;&gt;Links&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/atlas/caserealrender.png&quot; alt=&quot;Case Mockup&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;On the surface, these devices do not appear very computationally powerful, and sit on the edge of what you would consider an embedded device. They do feature fairly rich operating systems with a lot of user configuration. Wireless is typically also supported for connecting to sensors, typically using the ANT+ protocol or communication with a smartphone via Bluetooth.&lt;/p&gt;
-
-&lt;h3 id=&quot;primary-goal&quot;&gt;Primary Goal&lt;/h3&gt;
-
-&lt;p&gt;I wanted to build a device that could at a bare minimum display a map on a low power display, while also displaying a .GPX track indicating a pre-planned route. There is obviously a desire to maintain a low cost, and targeting a 32-bit microcontroller will aid in this. The actual required level of performance is an unknown, and will depend heavily on the software design and its capability.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;current-hardware-design&quot;&gt;Current Hardware Design&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/2021/03/06/atlas/&quot;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/2021/03/06/atlas-hardware/&quot;&gt;Hardware Design&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Software Design&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/btheobald/atlas/tree/atlas_dev&quot;&gt;Repository&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sat, 06 Mar 2021 00:00:00 +0000</pubDate>
+        <link>http://btheobald.github.io/2021/03/06/atlas-software/</link>
+        <guid isPermaLink="true">http://btheobald.github.io/2021/03/06/atlas-software/</guid>
+        
+        <category>GPS</category>
+        
+        <category>STM32</category>
+        
+        <category>PCB</category>
+        
+        <category>Mapping</category>
+        
+        <category>Cycling</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Atlas</title>
+        <description>&lt;h3 id=&quot;current-hardware-design&quot;&gt;Current Hardware Design&lt;/h3&gt;
 
 &lt;p&gt;The hardware design has been through several iterations, each time the level of capability being targeted has increased somewhat.&lt;/p&gt;
 
@@ -37,17 +53,17 @@ This version makes use of a STM32H723, an SoC implementing a Cortex M7 running a
 
 &lt;p&gt;&lt;strong&gt;STM32H723 Key Specs:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt; 550MHz Cortex M7 &lt;/li&gt;
-&lt;li&gt; 32kB D-Cache, 32kB I-Cache &lt;/li&gt;
-&lt;li&gt; 1MB Flash &lt;/li&gt;
-&lt;li&gt; 564kB SRAM &lt;/li&gt;
-&lt;li&gt; Octo-SPI Interface with XiP &lt;/li&gt;
-&lt;li&gt; SD interface up to UHS-1 &lt;/li&gt;
-&lt;li&gt; 24-Bit RGB LCD Controller &lt;/li&gt;
-&lt;li&gt; CORDIC Trigonometric Accelerator &lt;/li&gt;
+  &lt;li&gt;550MHz Cortex M7&lt;/li&gt;
+  &lt;li&gt;32kB D-Cache, 32kB I-Cache&lt;/li&gt;
+  &lt;li&gt;1MB Flash&lt;/li&gt;
+  &lt;li&gt;564kB SRAM&lt;/li&gt;
+  &lt;li&gt;Octo-SPI Interface with XiP&lt;/li&gt;
+  &lt;li&gt;SD interface up to UHS-1&lt;/li&gt;
+  &lt;li&gt;24-Bit RGB LCD Controller&lt;/li&gt;
+  &lt;li&gt;CORDIC Trigonometric Accelerator&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;This microcontroller is no slouch, the best part is that it is avaliable in a 100-pin LQFP, meaning that it would be very feasible for me to use in a design.&lt;/p&gt;
+&lt;p&gt;This microcontroller is no slouch, the best part is that it is avaliable in a 100-pin LQFP, meaning that it would be very feasible for me to use in reasonably low density design.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Memory&lt;/strong&gt; - The ammount of RAM is a major concern for this project, as it requires a frame-buffer for rendering (With consideration given to double-buffering) and also memory to load in and process map data in a vector or raster format.&lt;/p&gt;
 
@@ -72,11 +88,103 @@ The power button for the device is connected to the backup voltage, so that when
 
 &lt;p&gt;&lt;strong&gt;LCD&lt;/strong&gt; - There are two other primary regulators on the board, both of which are boost converters. One 5V boost converter (MCP1640) produces the analog voltage required for the LCD, the other is a constant current LED driver (LV52204), and is almost the same design that I implemented years ago for Atom/Aim. A PWM signal can be used to control the backlight brightness.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;(More To Follow)&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&quot;links&quot;&gt;Links&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/2021/03/06/atlas/&quot;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Hardware Design&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/2021/03/06/atlas-mapping/&quot;&gt;Mapping&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/2021/03/06/atlas-software/&quot;&gt;Software Design&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/btheobald/atlas/tree/atlas_dev&quot;&gt;Repository&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sat, 06 Mar 2021 00:00:00 +0000</pubDate>
+        <link>http://btheobald.github.io/2021/03/06/atlas-hardware/</link>
+        <guid isPermaLink="true">http://btheobald.github.io/2021/03/06/atlas-hardware/</guid>
+        
+        <category>GPS</category>
+        
+        <category>STM32</category>
+        
+        <category>PCB</category>
+        
+        <category>Mapping</category>
+        
+        <category>Cycling</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Atlas</title>
+        <description>&lt;p&gt;I started cycling over the summer of 2020 out of nesscessity. As I traveled further and further, my confidence improved and found a lot of enjoyment in being out and exploring on the bike. One barrier is that navigation while on the road is not always easy, so I’m building something to help with that.&lt;!--break--&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;current-market&quot;&gt;Current Market&lt;/h3&gt;
+
+&lt;p&gt;The cycling computer market is primarily dominated by two companies, both of which offer a range of SKUs at varying prices-points and feature-sets. Some will offer very basic black and white pre-planned route navigation, while others provide a full colour map and will re-route you if you take a wrong turn. Comercially, prices for these tend to range around £150-£500.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/atlas/caserealrender.png&quot; alt=&quot;Case Mockup&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;On the surface, these devices do not appear very computationally powerful and could be considered embedded devices. They do feature fairly rich operating systems with a lot of user configuration. Wireless is typically also supported for connecting to sensors using ANT+ or to a smartphone using Bluetooth.&lt;/p&gt;
+
+&lt;p&gt;Research has shown that some comercial products are running android under the hood, coupled with low power processors and screens. The benefit here is that development time can be reduced, though potentially at the expense some cost and effciency.&lt;/p&gt;
+
+&lt;h3 id=&quot;primary-goal&quot;&gt;Primary Goal&lt;/h3&gt;
+
+&lt;p&gt;I wanted to build a device that could at a bare minimum display a map on a low power display, while also displaying a .GPX track indicating a pre-planned route. There is obviously a desire to maintain a low cost, and targeting a 32-bit microcontroller will aid in this. Thhe software design will heavily influence the required level of hardware performance.&lt;/p&gt;
+
+&lt;p&gt;My aim will be to maintain a one-off cost of less than £100, which would present a good opourtunity to further reduce cost on a larger production run. I want to develop something that can be fairly robust and actually usable, so potentially later designing a companion app to wirelessly connect to the device and upload routes or firmware updates.&lt;/p&gt;
+
+&lt;h5 id=&quot;links&quot;&gt;Links&lt;/h5&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Introduction&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/2021/03/06/atlas-hardware/&quot;&gt;Hardware Design&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/2021/03/06/atlas-mapping/&quot;&gt;Mapping&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/2021/03/06/atlas-software/&quot;&gt;Software Design&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/btheobald/atlas/tree/atlas_dev&quot;&gt;Repository&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
         <pubDate>Sat, 06 Mar 2021 00:00:00 +0000</pubDate>
         <link>http://btheobald.github.io/2021/03/06/atlas/</link>
         <guid isPermaLink="true">http://btheobald.github.io/2021/03/06/atlas/</guid>
+        
+        <category>GPS</category>
+        
+        <category>STM32</category>
+        
+        <category>PCB</category>
+        
+        <category>Mapping</category>
+        
+        <category>Cycling</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Atlas</title>
+        <description>&lt;h3 id=&quot;map-formats&quot;&gt;Map Formats&lt;/h3&gt;
+
+&lt;p&gt;I also, where possible want to make use of standard mapping formats, OpenStreetMap data is under a Creative Commons Attribution-ShareAlike 2.0 License, and so is free to use for this sort of project and could still be used comercially.&lt;/p&gt;
+
+&lt;p&gt;Several standards exist to make processing these maps more effcient, such as Mapbox Vector Tiles, which splits up a map into smaller recursive tiles held in a SQL database, or Mapsforge which provides map data in a indexed binary file. Using these formats would mean that additional maps could easily be stored on an SD card and updated reguarly.&lt;/p&gt;
+
+&lt;p&gt;Vector formats are small, requiring around a gigabyte to map the entire of the United Kingdom down to street level The main detraction of vector tiles is the memory requirements of decoding and the processing required to perform the rendering. In some cases, these formats also support compression of the individual tiles, which could decrease the transfer time of a large tile over a relatively slow SD interface. However this then requires more processing.&lt;/p&gt;
+
+&lt;h5 id=&quot;links&quot;&gt;Links&lt;/h5&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;[Introduction] (/2021/03/06/atlas/)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/2021/03/06/atlas-hardware/&quot;&gt;Hardware Design&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Mapping&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/2021/03/06/atlas-software/&quot;&gt;Software Design&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/btheobald/atlas/tree/atlas_dev&quot;&gt;Repository&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sat, 06 Mar 2021 00:00:00 +0000</pubDate>
+        <link>http://btheobald.github.io/2021/03/06/atlas-mapping/</link>
+        <guid isPermaLink="true">http://btheobald.github.io/2021/03/06/atlas-mapping/</guid>
         
         <category>GPS</category>
         

@@ -1,11 +1,12 @@
 ---
 layout: post
 title: "Atlas"
+hidden: true
 status: In Build (March 2021)
 date: 2021-03-06
-description: 'A GPS Cycling Computer'
-caption: "Initial casing design for Atlas using PCB revision A."
-image: /assets/images/atlas/atlasviews.png
+description: 'Hardware Design'
+caption: "Revision A PCB for Atlas"
+image: /assets/images/atlas/atlastbsa.png
 author: Byron Theobald
 tags: 
   - GPS
@@ -13,22 +14,6 @@ tags:
   - PCB
   - Mapping
   - Cycling
----
-
-I got into cycling over the summer of 2020 out of nesscessity. As I traveled further and further, my confidence improved and found a lot of enjoyment in being out and exploring on the bike. One barrier is that navigation while on the road is not always easy, so I'm building something to help with that.<!--break-->
-
-### Current Market
-
-The cycling computer market is primarily dominated by two companies, both of which offer a range of SKUs at varying prices-points and feature-sets. Some will offer very basic black and white pre-planned route navigation, while others provide a full colour map and will re-route you if you take a wrong turn. Prices start at around £130 for a device with basic navigation, up to over £500 for a top-end device.
-
-![Case Mockup](/assets/images/atlas/caserealrender.png)
-
-On the surface, these devices do not appear very computationally powerful, and sit on the edge of what you would consider an embedded device. They do feature fairly rich operating systems with a lot of user configuration. Wireless is typically also supported for connecting to sensors, typically using the ANT+ protocol or communication with a smartphone via Bluetooth.
-
-### Primary Goal
-
-I wanted to build a device that could at a bare minimum display a map on a low power display, while also displaying a .GPX track indicating a pre-planned route. There is obviously a desire to maintain a low cost, and targeting a 32-bit microcontroller will aid in this. The actual required level of performance is an unknown, and will depend heavily on the software design and its capability.
-
 ---
 
 ### Current Hardware Design
@@ -39,18 +24,16 @@ The hardware design has been through several iterations, each time the level of 
 This version makes use of a STM32H723, an SoC implementing a Cortex M7 running at up to 550MHz in boost. This part blurs the line bettween a microcontroller and a application processor and should provide a lot of flexibility to firmware development at a very reasonable cost in single quantities (~£10).
 
 **STM32H723 Key Specs:**
-<ul>
-<li> 550MHz Cortex M7 </li>
-<li> 32kB D-Cache, 32kB I-Cache </li>
-<li> 1MB Flash </li>
-<li> 564kB SRAM </li>
-<li> Octo-SPI Interface with XiP </li>
-<li> SD interface up to UHS-1 </li>
-<li> 24-Bit RGB LCD Controller </li>
-<li> CORDIC Trigonometric Accelerator </li>
-</ul>
+- 550MHz Cortex M7
+- 32kB D-Cache, 32kB I-Cache
+- 1MB Flash
+- 564kB SRAM
+- Octo-SPI Interface with XiP
+- SD interface up to UHS-1
+- 24-Bit RGB LCD Controller
+- CORDIC Trigonometric Accelerator
 
-This microcontroller is no slouch, the best part is that it is avaliable in a 100-pin LQFP, meaning that it would be very feasible for me to use in a design. 
+This microcontroller is no slouch, the best part is that it is avaliable in a 100-pin LQFP, meaning that it would be very feasible for me to use in reasonably low density design.
 
 **Memory** - The ammount of RAM is a major concern for this project, as it requires a frame-buffer for rendering (With consideration given to double-buffering) and also memory to load in and process map data in a vector or raster format.
 
@@ -75,4 +58,10 @@ The power button for the device is connected to the backup voltage, so that when
 
 **LCD** - There are two other primary regulators on the board, both of which are boost converters. One 5V boost converter (MCP1640) produces the analog voltage required for the LCD, the other is a constant current LED driver (LV52204), and is almost the same design that I implemented years ago for Atom/Aim. A PWM signal can be used to control the backlight brightness.
 
-**(More To Follow)**
+#### Links
+
+- [Introduction]({% post_url atlas/21-03-06-atlas %})
+- Hardware Design
+- [Mapping]({% post_url atlas/21-03-06-atlas-mapping %})
+- [Software Design]({% post_url atlas/21-03-06-atlas-software %})
+- [Repository](https://github.com/btheobald/atlas/tree/atlas_dev)

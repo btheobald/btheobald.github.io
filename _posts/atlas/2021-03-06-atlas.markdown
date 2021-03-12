@@ -1,0 +1,42 @@
+---
+layout: post
+title: "Atlas"
+status: In Build (March 2021)
+date: 2021-03-06
+description: 'A GPS Cycling Computer'
+caption: "Initial casing design for Atlas using PCB revision A."
+image: /assets/images/atlas/atlasviews.png
+author: Byron Theobald
+tags: 
+  - GPS
+  - STM32
+  - PCB
+  - Mapping
+  - Cycling
+---
+
+I started cycling over the summer of 2020 out of nesscessity. As I traveled further and further, my confidence improved and found a lot of enjoyment in being out and exploring on the bike. One barrier is that navigation while on the road is not always easy, so I'm building something to help with that.<!--break-->
+
+### Current Market
+
+The cycling computer market is primarily dominated by two companies, both of which offer a range of SKUs at varying prices-points and feature-sets. Some will offer very basic black and white pre-planned route navigation, while others provide a full colour map and will re-route you if you take a wrong turn. Comercially, prices for these tend to range around £150-£500.
+
+![Case Mockup](/assets/images/atlas/caserealrender.png)
+
+On the surface, these devices do not appear very computationally powerful and could be considered embedded devices. They do feature fairly rich operating systems with a lot of user configuration. Wireless is typically also supported for connecting to sensors using ANT+ or to a smartphone using Bluetooth.
+
+Research has shown that some comercial products are running android under the hood, coupled with low power processors and screens. The benefit here is that development time can be reduced, though potentially at the expense some cost and effciency.
+
+### Primary Goal
+
+I wanted to build a device that could at a bare minimum display a map on a low power display, while also displaying a .GPX track indicating a pre-planned route. There is obviously a desire to maintain a low cost, and targeting a 32-bit microcontroller will aid in this. Thhe software design will heavily influence the required level of hardware performance.
+
+My aim will be to maintain a one-off cost of less than £100, which would present a good opourtunity to further reduce cost on a larger production run. I want to develop something that can be fairly robust and actually usable, so potentially later designing a companion app to wirelessly connect to the device and upload routes or firmware updates.
+
+##### Links
+
+- Introduction
+- [Hardware Design]({% post_url atlas/21-03-06-atlas-hardware %})
+- [Mapping]({% post_url atlas/21-03-06-atlas-mapping %})
+- [Software Design]({% post_url atlas/21-03-06-atlas-software %})
+- [Repository](https://github.com/btheobald/atlas/tree/atlas_dev)
