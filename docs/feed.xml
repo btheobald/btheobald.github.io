@@ -6,8 +6,8 @@
 </description>
     <link>http://btheobald.github.io</link>
     <atom:link href="http://btheobald.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 12 Mar 2021 19:55:19 +0000</pubDate>
-    <lastBuildDate>Fri, 12 Mar 2021 19:55:19 +0000</lastBuildDate>
+    <pubDate>Sat, 13 Mar 2021 09:45:02 +0000</pubDate>
+    <lastBuildDate>Sat, 13 Mar 2021 09:45:02 +0000</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -49,7 +49,7 @@
 &lt;p&gt;The hardware design has been through several iterations, each time the level of capability being targeted has increased somewhat.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Processor Selection&lt;/strong&gt; - Initial designs looked at the STM32L5 and STM32L4+ parts, which are Cortex M33 and Cortex M4 parts respectively, both of which clock at over 100MHz and have floating-point units.
-This version makes use of a STM32H723, an SoC implementing a Cortex M7 running at up to 550MHz in boost. This part blurs the line bettween a microcontroller and a application processor and should provide a lot of flexibility to firmware development at a very reasonable cost in single quantities (~£10).&lt;/p&gt;
+This version makes use of a STM32H723, an SoC implementing a Cortex M7 running at up to 550MHz in boost. This part blurs the line between a microcontroller and a application processor and should provide a lot of flexibility to firmware development at a very reasonable cost in single quantities (~£10).&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;STM32H723 Key Specs:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -65,11 +65,11 @@ This version makes use of a STM32H723, an SoC implementing a Cortex M7 running a
 
 &lt;p&gt;This microcontroller is no slouch, the best part is that it is avaliable in a 100-pin LQFP, meaning that it would be very feasible for me to use in reasonably low density design.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Memory&lt;/strong&gt; - The ammount of RAM is a major concern for this project, as it requires a frame-buffer for rendering (With consideration given to double-buffering) and also memory to load in and process map data in a vector or raster format.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Memory&lt;/strong&gt; - The amount of RAM is a major concern for this project, as it requires a frame-buffer for rendering (With consideration given to double-buffering) and also memory to load in and process map data in a vector or raster format.&lt;/p&gt;
 
-&lt;p&gt;OctoSPI theoreticallys double the maximum bandwith to an external memory compared to QSPI. The controller is also compatible with the HyperBus protocol, which takes it one step further and implements Double-Data Rate (DDR). This enables up to 200MB/s on a 100MHz using just 11-pins. DRAM is avaliable in 24-Ball FBGA packages with 1mm pitch. While I would normally try to stay away from BGA, this seems quite tame and provides large external memories (32-128Mb), while also allowing me to attempt BGA soldering.&lt;/p&gt;
+&lt;p&gt;OctoSPI theoretically double the maximum bandwidth to an external memory compared to QSPI. The controller is also compatible with the HyperBus protocol, which takes it one step further and implements Double-Data Rate (DDR). This enables up to 200MB/s on a 100MHz using just 11-pins. DRAM is available in 24-Ball FBGA packages with 1mm pitch. While I would normally try to stay away from BGA, this seems quite tame and provides large external memories (32-128Mb), while also allowing me to attempt BGA soldering.&lt;/p&gt;
 
-&lt;p&gt;With other variants of the chip, 2 OctoSPI controllers are avaliable, or even one in multiplexed mode. The pin-out of the 100-pin LQFP does not allow this so in the event that extra non-volatile storage is needed, an aditional SPI 32Mb flash chip is connected in 1x mode. This should be capable of 133MHz, and while it won’t support XiP, I’ve envisioned that at boot any application code could be copied via DMA into the large OctoSPI DRAM. It would take just 4 seconds to move the entire capacity of this flash chip into RAM.&lt;/p&gt;
+&lt;p&gt;With other variants of the chip, 2 OctoSPI controllers are available, or even one in multiplexed mode. The pin-out of the 100-pin LQFP does not allow this so in the event that extra non-volatile storage is needed, an additional SPI 32Mb flash chip is connected in 1x mode. This should be capable of 133MHz, and while it won’t support XiP, I’ve envisioned that at boot any application code could be copied via DMA into the large OctoSPI DRAM. It would take just 4 seconds to move the entire capacity of this flash chip into RAM.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Display&lt;/strong&gt; - Another attraction of this SoC is the built in TFT controller, which allows for a up to 24-bit RGB LCD to be connected directly. for the 100-pin chip the full 24-bits is impractical at best, STM32Cube allows you to configure the peripheral as 16, 18 or 24 bits, however the datasheet makes no reference to these modes. This indicates that the number of bits is purely configured by the alternate function config for each pin, allowing for arbitrary colour depths.&lt;/p&gt;
 
@@ -79,12 +79,12 @@ This version makes use of a STM32H723, an SoC implementing a Cortex M7 running a
 
 &lt;h3 id=&quot;power-supply&quot;&gt;Power Supply&lt;/h3&gt;
 
-&lt;p&gt;&lt;strong&gt;Battery&lt;/strong&gt; - A large portion of the board is dedicated to power-supply, the design will ideally run of a single lithium-polymer cell. This is run through a standalone TI BQ25606, which is a 3A capable SMPS charger which provides Narrow-Voltage DC (NVDC), ensuring that the main system rail always runs bettween 3.5 and 4.5V, even while charging. This simplifys the later power stages somewhat, as we can use a simple Buck converter or LDO for the primary 3.3V rail instead of requiring a more expensive Buck-Boost. For battery State-of-Charge monitoring, I also included a MAX17048 fuel-gauge on an I2C interface.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Battery&lt;/strong&gt; - A large portion of the board is dedicated to power-supply, the design will ideally run of a single lithium-polymer cell. This is run through a standalone TI BQ25606, which is a 3A capable SMPS charger which provides Narrow-Voltage DC (NVDC), ensuring that the main system rail always runs between 3.5 and 4.5V, even while charging. This simplifies the later power stages somewhat, as we can use a simple Buck converter or LDO for the primary 3.3V rail instead of requiring a more expensive Buck-Boost. For battery State-of-Charge monitoring, I also included a MAX17048 fuel-gauge on an I2C interface.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Primary&lt;/strong&gt; - The primary rail is where things get interesting, I made the design as low-power as physically possible in the off-state without software. To acheive this, I took the enable pin of the 3.3V regulator (TLV62569) and connect this to an output on the core. This might seem unwise, however the core has a backup power supply, provided by a low Iq 3.0V LDO (MCP1810). The reference manual states that the pull-ups will remain operational during the lowest power modes on certain ‘Backup IO’.
-The power button for the device is connected to the backup voltage, so that when pressed the voltage goes through a ‘bootstrap’ schottky diode and onto the enable pin of the regulator. Once the microcontroller has started, it can take over control of this pin and hold enable high itself. The schottky diode allows the button to be utilised in the software.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Primary&lt;/strong&gt; - The primary rail is where things get interesting, I made the design as low-power as physically possible in the off-state without software. To achieve this, I took the enable pin of the 3.3V regulator (TLV62569) and connect this to an output on the core. This might seem unwise, however the core has a backup power supply, provided by a low Iq 3.0V LDO (MCP1810). The reference manual states that the pull-ups will remain operational during the lowest power modes on certain ‘Backup IO’.
+The power button for the device is connected to the backup voltage, so that when pressed the voltage goes through a ‘bootstrap’ Schottky diode and onto the enable pin of the regulator. Once the microcontroller has started, it can take over control of this pin and hold enable high itself. The Schottky diode allows the button to be utilise in the software.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Core&lt;/strong&gt; - While there is a version of the STM32H72x produced with a built in SMPS to improve effciency, The 100-pin LQFP variant cannot be configured to use OctoSPI. In order to use both I would need to step up to the 100-Ball TFBGA with a 0.8mm pitch, stock of which is currently non-existent. For sake of comparison, I included an external SMPS (ST1PS02) with an adjustable output of 1-1.35V. The voltage required is dependant on clock frequency. This external core voltage can be fed in via the VCAP pins when the internal LDO is bypassed.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Core&lt;/strong&gt; - While there is a version of the STM32H72x produced with a built in SMPS to improve efficiency, The 100-pin LQFP variant cannot be configured to use OctoSPI. In order to use both I would need to step up to the 100-Ball TFBGA with a 0.8mm pitch, stock of which is currently non-existent. For sake of comparison, I included an external SMPS (ST1PS02) with an adjustable output of 1-1.35V. The voltage required is dependant on clock frequency. This external core voltage can be fed in via the VCAP pins when the internal LDO is bypassed.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;LCD&lt;/strong&gt; - There are two other primary regulators on the board, both of which are boost converters. One 5V boost converter (MCP1640) produces the analog voltage required for the LCD, the other is a constant current LED driver (LV52204), and is almost the same design that I implemented years ago for Atom/Aim. A PWM signal can be used to control the backlight brightness.&lt;/p&gt;
 
@@ -121,19 +121,19 @@ The power button for the device is connected to the backup voltage, so that when
 
 &lt;h3 id=&quot;current-market&quot;&gt;Current Market&lt;/h3&gt;
 
-&lt;p&gt;The cycling computer market is primarily dominated by two companies, both of which offer a range of SKUs at varying prices-points and feature-sets. Some will offer very basic black and white pre-planned route navigation, while others provide a full colour map and will re-route you if you take a wrong turn. Comercially, prices for these tend to range around £150-£500.&lt;/p&gt;
+&lt;p&gt;The cycling computer market is primarily dominated by two companies, both of which offer a range of SKUs at varying prices-points and feature-sets. Some will offer very basic black and white pre-planned route navigation, while others provide a full colour map and will re-route you if you take a wrong turn. Commercially, prices for these tend to range around £150-£500.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/atlas/caserealrender.png&quot; alt=&quot;Case Mockup&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;On the surface, these devices do not appear very computationally powerful and could be considered embedded devices. They do feature fairly rich operating systems with a lot of user configuration. Wireless is typically also supported for connecting to sensors using ANT+ or to a smartphone using Bluetooth.&lt;/p&gt;
 
-&lt;p&gt;Research has shown that some comercial products are running android under the hood, coupled with low power processors and screens. The benefit here is that development time can be reduced, though potentially at the expense some cost and effciency.&lt;/p&gt;
+&lt;p&gt;Research has shown that some commercial products are running android under the hood, coupled with low power processors and screens. The benefit here is that development time can be reduced, though potentially at the expense some cost and efficiency.&lt;/p&gt;
 
 &lt;h3 id=&quot;primary-goal&quot;&gt;Primary Goal&lt;/h3&gt;
 
-&lt;p&gt;I wanted to build a device that could at a bare minimum display a map on a low power display, while also displaying a .GPX track indicating a pre-planned route. There is obviously a desire to maintain a low cost, and targeting a 32-bit microcontroller will aid in this. Thhe software design will heavily influence the required level of hardware performance.&lt;/p&gt;
+&lt;p&gt;I wanted to build a device that could at a bare minimum display a map on a low power display, while also displaying a .GPX track indicating a pre-planned route. There is obviously a desire to maintain a low cost, and targeting a 32-bit microcontroller will aid in this. The software design will heavily influence the required level of hardware performance.&lt;/p&gt;
 
-&lt;p&gt;My aim will be to maintain a one-off cost of less than £100, which would present a good opourtunity to further reduce cost on a larger production run. I want to develop something that can be fairly robust and actually usable, so potentially later designing a companion app to wirelessly connect to the device and upload routes or firmware updates.&lt;/p&gt;
+&lt;p&gt;My aim will be to maintain a one-off cost of less than £100, which would present a good opportunity to further reduce cost on a larger production run. I want to develop something that can be fairly robust and actually usable, so potentially later designing a companion app to wirelessly connect to the device and upload routes or firmware updates.&lt;/p&gt;
 
 &lt;h5 id=&quot;links&quot;&gt;Links&lt;/h5&gt;
 
@@ -166,9 +166,9 @@ The power button for the device is connected to the backup voltage, so that when
         <title>Atlas</title>
         <description>&lt;h3 id=&quot;map-formats&quot;&gt;Map Formats&lt;/h3&gt;
 
-&lt;p&gt;I also, where possible want to make use of standard mapping formats, OpenStreetMap data is under a Creative Commons Attribution-ShareAlike 2.0 License, and so is free to use for this sort of project and could still be used comercially.&lt;/p&gt;
+&lt;p&gt;I also, where possible want to make use of standard mapping formats, OpenStreetMap data is under a Creative Commons Attribution-ShareAlike 2.0 License, and so is free to use for this sort of project and could still be used commercially.&lt;/p&gt;
 
-&lt;p&gt;Several standards exist to make processing these maps more effcient, such as Mapbox Vector Tiles, which splits up a map into smaller recursive tiles held in a SQL database, or Mapsforge which provides map data in a indexed binary file. Using these formats would mean that additional maps could easily be stored on an SD card and updated reguarly.&lt;/p&gt;
+&lt;p&gt;Several standards exist to make processing these maps more efficient to access, such as Mapbox Vector Tiles, which splits up a map into smaller recursive tiles held in a SQL database, or Mapsforge which provides map data in a indexed binary file. Using these formats would mean that additional maps could easily be stored on an SD card and updated regularly.&lt;/p&gt;
 
 &lt;p&gt;Vector formats are small, requiring around a gigabyte to map the entire of the United Kingdom down to street level The main detraction of vector tiles is the memory requirements of decoding and the processing required to perform the rendering. In some cases, these formats also support compression of the individual tiles, which could decrease the transfer time of a large tile over a relatively slow SD interface. However this then requires more processing.&lt;/p&gt;
 
