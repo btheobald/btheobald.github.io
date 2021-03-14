@@ -6,21 +6,30 @@
 </description>
     <link>http://btheobald.github.io</link>
     <atom:link href="http://btheobald.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 13 Mar 2021 09:45:02 +0000</pubDate>
-    <lastBuildDate>Sat, 13 Mar 2021 09:45:02 +0000</lastBuildDate>
+    <pubDate>Sun, 14 Mar 2021 23:23:30 +0000</pubDate>
+    <lastBuildDate>Sun, 14 Mar 2021 23:23:30 +0000</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
         <title>Atlas</title>
         <description>&lt;h3 id=&quot;current-software-design&quot;&gt;Current Software Design&lt;/h3&gt;
 
-&lt;p&gt;Details to follow.&lt;/p&gt;
+&lt;p&gt;The software behind Atlas is probably the biggest challenge for the project and the part that will require me to learn a lot about working on complex embedded devices with a comparatively large amount of memory.&lt;/p&gt;
+
+&lt;p&gt;It is quite likely that the device will be memory constrained in the first instance. Memory bandwidth is also likely to be a concern, particularly from the bootloader SPI flash. Data would be copied into external RAM when the device is switched on, the entire contents of the flash could be copied into external RAM in less than a second, making this rate less of a concern.&lt;/p&gt;
+
+&lt;p&gt;This does mean that when power is lost, any data loaded into this RAM will also be lost and this data will need to be copied every time on boot. Any config data will be written to the flash when modified, previous location data should also be written allowing the map to immediately resume to the last location.&lt;/p&gt;
+
+&lt;p&gt;Theres a lot of separate tasks that will need to happen for this device to function properly, so it is likely that it will be based on an RTOS to provide a task scheduler and provide a greater level of hardware abstraction. I’m currently investigating Zephyr Project, particularly due to the build system that it provides.&lt;/p&gt;
+
+&lt;p&gt;Zephyr would also make integrating secure firmware upgrades possible using MCUboot. While not particularly important for a prototype, it would be interesting to experiment with on the route to product development.&lt;/p&gt;
 
 &lt;h4 id=&quot;links&quot;&gt;Links&lt;/h4&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;/2021/03/06/atlas/&quot;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;/2021/03/06/atlas-hardware/&quot;&gt;Hardware Design&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/2021/03/06/atlas-mapping/&quot;&gt;Mapping&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Software Design&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/btheobald/atlas/tree/atlas_dev&quot;&gt;Repository&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
